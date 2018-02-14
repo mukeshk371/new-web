@@ -34,7 +34,7 @@
          </div>
 		 
 		 <div style = "background-color: #191970; height:150px; width:33.33%; float:left;" >
-		 <a href="http://gmail.com" class="button">PORTAL</a>
+		 <a href="views/registartion/registartion.html" class="button">PORTAL</a>
 		 <br/>
 		 
 		 <form>
@@ -113,7 +113,7 @@
 </td>
 
 
-<div class="slideshow-container">
+<div class="slideshow-container" >
 
 <div class="mySlides fade">
   <img src="resources/images/sports/sports (1).jpg" style="width:100%">
@@ -168,32 +168,22 @@
 
 
 <script>
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 0;
+showSlides();
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+	
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000);
+	}
 </script>
 
 </body>
