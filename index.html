@@ -10,6 +10,10 @@
 <link rel="stylesheet" text="text/css" href="resources/css/box.css">
 <link rel="stylesheet" text="text/css" href="resources/css/search_bar.css">
 <link rel="stylesheet" text="text/css" href="resources/css/profile.css">
+<link rel="stylesheet" text="text/css" href="resources/css/slide_show.css">
+<link rel="stylesheet" text="text/css" href="resources/css/slide.css">
+<link rel="stylesheet" text="text/css" href="resources/css/social_media_icon.css">
+
 <br/>
 
 <body>
@@ -22,22 +26,37 @@
 </ul>
 
 <div style = "background-color: #191970; height:150px; width:33.33%; float:left;" >
-   <div valign="middle" style="float:right" ><img src="resources/images/Picture3.png" width = "100%"></div>
+   <div valign="middle" style="float:right" ><img src="resources/images/logo/Picture3.png" width = "100%"></div>
 </div>
 			
          <div style = "background-color: #191970; height:150px; width:33.33%; float:left;" >
-            <div style="float:center"><img src="resources/images/new.jpg" height="90%" width = "70%"></div>
+            <div style="float:center"><img src="resources/images/logo/new.jpg" height="90%" width = "70%"></div>
          </div>
 		 
 		 <div style = "background-color: #191970; height:150px; width:33.33%; float:left;" >
 		 <a href="http://gmail.com" class="button">PORTAL</a>
 		 <br/>
+		 
 		 <form>
            <input type="text" name="search" placeholder="Search..">
          </form>
-         </div>
-		 <br/>
+		 
+		 <div id="share-buttons">
+		<a href="https://www.instagram.com/accounts/login/" target="blank">
+        <img src="resources/images/logo/instagram.png" alt="Instagram" />
 		
+		<a href="http://www.facebook.com" target="blank">
+        <img src="resources/images/logo/facebook.png" alt="Facebook" />
+		
+		<a href="https://twitter.com/login" target="blank">
+        <img src="resources/images/logo/twitter.png" alt="Twitter" />
+		
+		<a href="https://vimeo.com/" target="_blank">
+        <img src="resources/images/logo/vimeo.png" alt="Vimeo" />
+    </a>
+		  
+		</div>
+		</div>
 		 
 <td>		 
 <div class="navbar">
@@ -89,28 +108,93 @@
        <a href="http://www.biharboard.ac.in/"><u>BSEB Website</u></a>
 	   </div>
 	   </div>
-	   
 	   <a href="#">HELP</a>
-	   
-	   
 </div>
 </td>
 
-<td bgcolor = "#b5dcb3" width = "60%" id = 'content'>
-	<marquee behavior="scroll" direction="up" valign="center" height="350" scrollamount="10">
-		<center>
-		  <img src="resources/images/sports/sports (1).jpg" width = "100%" height= "100%">
-		  <img src="resources/images/sports/sports (2).jpg" width = "100%" height= "100%">
-		  <img src="resources/images/sports/sports (3).jpg" width = "100%" height= "100%">
-		  <img src="resources/images/sports/sports (4).jpg" width = "100%" height= "100%">
-		  <img src="resources/images/sports/sports (5).jpg" width = "100%" height= "100%">
-		  <img src="resources/images/transport/transport (1).jpg" width = "100%" height= "100%">
-		  <img src="resources/images/transport/transport (2).jpg" width = "100%" height= "100%">
-		  <img src="resources/images/transport/transport (3).jpg" width = "100%" height= "100%">
-		  <img src="resources/images/transport/transport (4).jpg" width = "100%" height= "100%">
-		  </center>
-	  </marquee>
-</td>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="resources/images/sports/sports (1).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="resources/images/sports/sports (2).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="resources/images/sports/sports (3).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="resources/images/sports/sports (4).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="resources/images/sports/sports (5).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="resources/images/transport/transport (1).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="resources/images/transport/transport (2).jpg" style="width:100%">
+  </div>
+  
+<div class="mySlides fade">
+  <img src="resources/images/transport/transport (3).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="resources/images/transport/transport (4).jpg" style="width:100%">
+</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<br/>
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 </body>
 </html>
