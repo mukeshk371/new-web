@@ -1,5 +1,5 @@
 
-.button {
+.button1 {
 	background-color: #1E90FF;
     border: none;
     color: white;
@@ -9,7 +9,7 @@
     font-size: 16px;
 	cursor: pointer;
 }
-.button:before {
+.button1:before {
     background: url("resources/images/portal.png")no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0); 
 	background-position:center;
     content: "";

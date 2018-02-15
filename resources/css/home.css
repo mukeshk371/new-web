@@ -1,19 +1,19 @@
-      h1{
-	  color:blue;
-	  font-size:33px;
-	  font-family:comic sans ms;}
-      
-      h2{
-	  color:green;
-	  font-size:25px;
-	  font-family:comic sans ms;}
-       
-      h3{
-          color:red;
-          font-size:25px;
-	      font-family:comic sans ms;}
+body {
+    color: white;
+}
 
-      span{
-	  color:red;
-	  font-size:20px;
-	  font-family:comic sans ms;}
+
+h1 {
+    color: #FFD700;
+}
+
+h3 {
+    color:black;
+	text-align:center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
