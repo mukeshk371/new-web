@@ -35,43 +35,6 @@
 }
 
 
-.button {
-    background-color: rgba(0,0,0,0.5);
-	position: middle;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.button1 {padding: 10px 24px;}
-
-.button:hover{
-	background-color: #FFD700;
-}
-
-.button2 {
-    background-color: rgba(0,0,255,0.9);
-	position: center;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.button3 {padding: 15px 30px;}
-
-.button2:hover{
-	background-color: #FFD700;
-}
 
 
 
