@@ -3,8 +3,14 @@ body {
 }
 
 
+.box h1 {
+	color: #F36D21;
+}
+
+
 h1 {
-    color: #FFD700;
+    color: #00008B;
+	text-align: center;
 }
 
 h3 {
@@ -16,4 +22,24 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+@media only screen and (max-width:620px) {
+	li, {
+		width: 100%;
+		float: center;
+	}
+
+
+	.navbar a {
+		width: 100%;
+		float: center;
+	}
+
+
+	.box, .box, {
+		width: 100%;
+		float: center;
+	}
 }
