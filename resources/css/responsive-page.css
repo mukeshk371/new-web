@@ -1,0 +1,46 @@
+@media screen and (max-width: 600px) {
+  .navbar a {display: none;}
+  .navbar a.icon {
+    float: center;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative; 
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+  .navbar.responsive .icon {
+    position: relative;
+    float: none;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar.responsive a {
+    position: relative;
+    float: none;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+
+  .dropdown {
+    display: none;
+  }
+}
+
+
+
+.navbar .icon {
+  display: none;
+}
+
+
+}
